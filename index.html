@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lunii Tees – Estilo, Conforto e Personalidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --rosa: #f4a7b9;
+      --rosa-claro: #fde8ef;
+      --rosa-escuro: #e07a97;
+      --creme: #fdf6f0;
+      --branco: #ffffff;
+      --texto: #3a2c2c;
+      --cinza: #888;
+    }
+
+    body { font-family: 'Poppins', sans-serif; color: var(--texto); background: var(--branco); }
+
+    /* ===== HEADER ===== */
+    .topbar {
+      background: var(--rosa-escuro);
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    header {
+      background: var(--branco);
+      border-bottom: 1px solid #f0d6de;
+      padding: 16px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--rosa-escuro);
+      letter-spacing: 3px;
+    }
+    .logo span { color: var(--rosa); }
+
+    nav a {
+      text-decoration: none;
+      color: var(--texto);
+      margin: 0 18px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--rosa-escuro); }
+
+    .header-icons { display: flex; gap: 20px; align-items: center; }
+    .header-icons svg { width: 22px; height: 22px; stroke: var(--texto); cursor: pointer; transition: stroke 0.3s; }
+    .header-icons svg:hover { stroke: var(--rosa-escuro); }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--rosa-claro) 0%, var(--creme) 60%, #fce4ec 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 80px;
+      min-height: 90vh;
+      gap: 40px;
+    }
+
+    .hero-text { max-width: 520px; }
+    .hero-text .badge {
+      background: var(--rosa);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 58px;
+      line-height: 1.15;
+      color: var(--texto);
+      margin-bottom: 20px;
+    }
+    .hero-text h1 em { color: var(--rosa-escuro); font-style: italic; }
+    .hero-text p {
+      font-size: 16px;
+      color: #6b5050;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .btn-primary {
+      background: var(--rosa-escuro);
+      color: white;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition
