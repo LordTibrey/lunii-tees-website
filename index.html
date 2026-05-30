@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lunii Tees – Estilo, Conforto e Personalidade</title>
+  <title>Lunii Tees - Estilo, Conforto e Personalidade</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
       --rosa: #f4a7b9;
       --rosa-claro: #fde8ef;
@@ -17,104 +16,374 @@
       --texto: #3a2c2c;
       --cinza: #888;
     }
-
     body { font-family: 'Poppins', sans-serif; color: var(--texto); background: var(--branco); }
-
-    /* ===== HEADER ===== */
-    .topbar {
-      background: var(--rosa-escuro);
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    header {
-      background: var(--branco);
-      border-bottom: 1px solid #f0d6de;
-      padding: 16px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--rosa-escuro);
-      letter-spacing: 3px;
-    }
+    .topbar { background: var(--rosa-escuro); color: white; text-align: center; padding: 8px; font-size: 13px; letter-spacing: 1px; }
+    header { background: var(--branco); border-bottom: 1px solid #f0d6de; padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--rosa-escuro); letter-spacing: 3px; }
     .logo span { color: var(--rosa); }
-
-    nav a {
-      text-decoration: none;
-      color: var(--texto);
-      margin: 0 18px;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: color 0.3s;
-    }
+    nav a { text-decoration: none; color: var(--texto); margin: 0 18px; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
     nav a:hover { color: var(--rosa-escuro); }
-
     .header-icons { display: flex; gap: 20px; align-items: center; }
     .header-icons svg { width: 22px; height: 22px; stroke: var(--texto); cursor: pointer; transition: stroke 0.3s; }
     .header-icons svg:hover { stroke: var(--rosa-escuro); }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(135deg, var(--rosa-claro) 0%, var(--creme) 60%, #fce4ec 100%);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 80px;
-      min-height: 90vh;
-      gap: 40px;
-    }
-
+    .hero { background: linear-gradient(135deg, var(--rosa-claro) 0%, var(--creme) 60%, #fce4ec 100%); display: flex; align-items: center; justify-content: space-between; padding: 80px; min-height: 90vh; gap: 40px; }
     .hero-text { max-width: 520px; }
-    .hero-text .badge {
-      background: var(--rosa);
-      color: white;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 20px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .hero-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 58px;
-      line-height: 1.15;
-      color: var(--texto);
-      margin-bottom: 20px;
-    }
+    .hero-text .badge { background: var(--rosa); color: white; font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: 20px; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 58px; line-height: 1.15; color: var(--texto); margin-bottom: 20px; }
     .hero-text h1 em { color: var(--rosa-escuro); font-style: italic; }
-    .hero-text p {
-      font-size: 16px;
-      color: #6b5050;
-      line-height: 1.8;
-      margin-bottom: 36px;
+    .hero-text p { font-size: 16px; color: #6b5050; line-height: 1.8; margin-bottom: 36px; }
+    .btn-primary { background: var(--rosa-escuro); color: white; padding: 16px 40px; border: none; border-radius: 40px; font-size: 14px; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.3s, transform 0.2s; }
+    .btn-primary:hover { background: #c4607a; transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--rosa-escuro); border: 2px solid var(--rosa-escuro); padding: 14px 36px; border-radius: 40px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; margin-left: 16px; display: inline-block; transition: all 0.3s; }
+    .btn-secondary:hover { background: var(--rosa-escuro); color: white; }
+    .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; }
+    .hero-image .img-mockup { width: 420px; height: 520px; background: linear-gradient(145deg, #f9d0dc, #fce4ec); border-radius: 30px 30px 120px 30px; display: flex; align-items: center; justify-content: center; font-size: 140px; box-shadow: 0 30px 80px rgba(224,122,151,0.25); position: relative; overflow: hidden; }
+    .categories { padding: 60px 80px; background: var(--branco); }
+    .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 10px; color: var(--texto); }
+    .section-sub { text-align: center; color: var(--cinza); font-size: 14px; margin-bottom: 46px; letter-spacing: 1px; }
+    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .cat-card { border-radius: 20px; overflow: hidden; position: relative; height: 280px; cursor: pointer; }
+    .cat-card .bg { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 24px; transition: transform 0.4s; }
+    .cat-card:hover .bg { transform: scale(1.04); }
+    .cat-card:nth-child(1) .bg { background: linear-gradient(160deg, #fde8ef, #f4a7b9); }
+    .cat-card:nth-child(2) .bg { background: linear-gradient(160deg, #fce4ec, #e07a97); }
+    .cat-card:nth-child(3) .bg { background: linear-gradient(160deg, #fff0f5, #f9c8d8); }
+    .cat-card .cat-label { font-family: 'Playfair Display', serif; font-size: 22px; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .cat-card .cat-sub { color: rgba(255,255,255,0.85); font-size: 13px; margin-top: 4px; }
+    .products { padding: 70px 80px; background: var(--creme); }
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .product-card { background: var(--branco); border-radius: 18px; overflow: hidden; box-shadow: 0 4px 20px rgba(224,122,151,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(224,122,151,0.2); }
+    .product-img { height: 280px; display: flex; align-items: center; justify-content: center; font-size: 80px; position: relative; }
+    .p1 { background: linear-gradient(135deg, #fde8ef, #fce4ec); }
+    .p2 { background: linear-gradient(135deg, #fff0f5, #fde8ef); }
+    .p3 { background: linear-gradient(135deg, #f9e4ee, #fce4ec); }
+    .p4 { background: linear-gradient(135deg, #fce4ec, #f4a7b9); }
+    .product-badge { position: absolute; top: 14px; left: 14px; background: var(--rosa-escuro); color: white; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px; }
+    .product-info { padding: 18px; }
+    .product-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .product-info .price { color: var(--rosa-escuro); font-weight: 700; font-size: 17px; }
+    .product-info .old-price { text-decoration: line-through; color: var(--cinza); font-size: 13px; margin-right: 6px; }
+    .add-cart { width: 100%; margin-top: 12px; padding: 11px; background: var(--rosa-claro); color: var(--rosa-escuro); border: none; border-radius: 10px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.3s, color 0.3s; }
+    .add-cart:hover { background: var(--rosa-escuro); color: white; }
+    .banner { background: linear-gradient(135deg, var(--rosa-escuro), #c4607a); padding: 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .banner-text h2 { font-family: 'Playfair Display', serif; font-size: 44px; color: white; margin-bottom: 16px; line-height: 1.2; }
+    .banner-text p { color: rgba(255,255,255,0.85); font-size: 16px; max-width: 400px; line-height: 1.8; }
+    .btn-white { margin-top: 30px; background: white; color: var(--rosa-escuro); padding: 16px 40px; border: none; border-radius: 40px; font-size: 14px; font-weight: 700; cursor: pointer; display: inline-block; text-decoration: none; transition: transform 0.2s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .banner-deco { font-size: 100px; opacity: 0.2; color: white; }
+    .about { padding: 80px; display: flex; align-items: center; gap: 60px; background: var(--branco); }
+    .about-img { width: 420px; height: 480px; min-width: 420px; background: linear-gradient(145deg, var(--rosa-claro), #fce4ec); border-radius: 100px 30px 100px 30px; display: flex; align-items: center; justify-content: center; font-size: 120px; box-shadow: 0 20px 60px rgba(224,122,151,0.2); }
+    .about-text h2 { font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 20px; }
+    .about-text p { font-size: 15px; line-height: 1.9; color: #6b5050; margin-bottom: 16px; }
+    .about-highlights { display: flex; gap: 30px; margin-top: 30px; }
+    .highlight { text-align: center; }
+    .highlight .num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--rosa-escuro); }
+    .highlight .label { font-size: 12px; color: var(--cinza); letter-spacing: 1px; text-transform: uppercase; }
+    .testimonials { padding: 70px 80px; background: var(--creme); }
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .test-card { background: white; border-radius: 16px; padding: 28px; box-shadow: 0 4px 20px rgba(224,122,151,0.08); }
+    .stars { color: var(--rosa-escuro); font-size: 18px; margin-bottom: 14px; }
+    .test-card p { font-size: 14px; line-height: 1.8; color: #5a4040; font-style: italic; }
+    .test-author { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+    .avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; background: var(--rosa-claro); }
+    .test-author .name { font-weight: 600; font-size: 14px; }
+    .test-author .city { font-size: 12px; color: var(--cinza); }
+    .newsletter { background: var(--rosa-claro); padding: 60px 80px; text-align: center; }
+    .newsletter h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 10px; }
+    .newsletter p { color: #6b5050; margin-bottom: 30px; }
+    .newsletter-form { display: flex; gap: 12px; justify-content: center; max-width: 500px; margin: 0 auto; }
+    .newsletter-form input { flex: 1; padding: 14px 20px; border: 1px solid #f4a7b9; border-radius: 40px; font-size: 14px; outline: none; background: white; }
+    .newsletter-form input:focus { border-color: var(--rosa-escuro); }
+    footer { background: var(--texto); color: #e0c8c8; padding: 60px 80px 30px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand p { font-size: 13px; line-height: 1.8; color: #b0a0a0; }
+    .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+    .social-icon { width: 38px; height: 38px; border-radius: 50%; background: rgba(244,167,185,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: background 0.3s; }
+    .social-icon:hover { background: var(--rosa-escuro); }
+    .footer-col h4 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+    .footer-col a { display: block; color: #b0a0a0; text-decoration: none; font-size: 13px; margin-bottom: 10px; transition: color 0.3s; }
+    .footer-col a:hover { color: var(--rosa); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 12px; color: #7a6060; }
+    @media (max-width: 1024px) {
+      .hero { flex-direction: column; padding: 50px 30px; text-align: center; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      header { padding: 16px 24px; }
+      .about { flex-direction: column; padding: 50px 30px; }
+      .about-img { min-width: auto; width: 100%; height: 300px; }
     }
-    .btn-primary {
-      background: var(--rosa-escuro);
-      color: white;
-      padding: 16px 40px;
-      border: none;
-      border-radius: 40px;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 36px; }
+      .products-grid { grid-template-columns: 1fr; }
+      .test-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .categories { padding: 40px 20px; }
+      .products { padding: 40px 20px; }
+      .banner { padding: 40px 20px; flex-direction: column; }
+      .testimonials { padding: 40px 20px; }
+      .newsletter { padding: 40px 20px; }
+      footer { padding: 40px 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BARRA TOPO -->
+<div class="topbar">
+  FRETE GRATIS NAS COMPRAS ACIMA DE R$199 &bull; ATACADO DISPONIVEL PARA REVENDEDORAS
+</div>
+
+<!-- CABECALHO -->
+<header>
+  <div class="logo">LUNII<span>*</span></div>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Colecoes</a>
+    <a href="#">Novidades</a>
+    <a href="#">Atacado</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+  <div class="header-icons">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    </svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+    </svg>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="badge">Nova Colecao 2025</span>
+    <h1>Estilo, Conforto<br>e <em>Personalidade</em></h1>
+    <p>Camisetas femininas que transformam o look e expressam quem voce e. Feitas com amor, para mulheres incriveis.</p>
+    <a href="#produtos" class="btn-primary">Ver Colecao</a>
+    <a href="#atacado" class="btn-secondary">Atacado</a>
+  </div>
+  <div class="hero-image">
+    <div class="img-mockup">&#128249;</div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="categories" id="colecoes">
+  <h2 class="section-title">Nossas Categorias</h2>
+  <p class="section-sub">ENCONTRE O SEU ESTILO</p>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="bg">
+        <div>
+          <div class="cat-label">Camisetas Oversized</div>
+          <div class="cat-sub">Conforto e Estilo</div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="bg">
+        <div>
+          <div class="cat-label">Estampas Motivacionais</div>
+          <div class="cat-sub">Mensagens que inspiram</div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="bg">
+        <div>
+          <div class="cat-label">Lancamentos</div>
+          <div class="cat-sub">Novidades da semana</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="products" id="produtos">
+  <h2 class="section-title">Mais Vendidas</h2>
+  <p class="section-sub">PECAS QUE FAZEM SUCESSO</p>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-img p1">
+        <span class="product-badge">NOVO</span>
+        &#128249;
+      </div>
+      <div class="product-info">
+        <h3>Camiseta Fe, Cafe e Alegria</h3>
+        <div><span class="old-price">R$89,90</span><span class="price">R$69,90</span></div>
+        <button class="add-cart">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img p2">
+        <span class="product-badge">DESTAQUE</span>
+        &#128250;
+      </div>
+      <div class="product-info">
+        <h3>Camiseta Seja Forte e Corajosa</h3>
+        <div><span class="price">R$79,90</span></div>
+        <button class="add-cart">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img p3">
+        &#128249;
+      </div>
+      <div class="product-info">
+        <h3>Camiseta Good Things Takes Time</h3>
+        <div><span class="old-price">R$94,90</span><span class="price">R$74,90</span></div>
+        <button class="add-cart">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img p4">
+        <span class="product-badge">TOP</span>
+        &#128250;
+      </div>
+      <div class="product-info">
+        <h3>Camiseta Correr Atras dos Sonhos</h3>
+        <div><span class="price">R$79,90</span></div>
+        <button class="add-cart">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BANNER ATACADO -->
+<section class="banner" id="atacado">
+  <div class="banner-text">
+    <h2>Seja uma<br>Revendedora Lunii</h2>
+    <p>Trabalhe com moda feminina de qualidade. Atacado disponivel para revendedoras em todo o Brasil com condicoes especiais.</p>
+    <a href="#contato" class="btn-white">Quero ser Revendedora</a>
+  </div>
+  <div class="banner-deco">&#10022;</div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="about-img">&#127800;</div>
+  <div class="about-text">
+    <h2>Sobre a Lunii</h2>
+    <p>A Lunii nasceu da vontade de criar pecas que vao alem da moda - camisetas que carregam personalidade, fe e alegria. Cada estampa e pensada para mulheres que querem se expressar com autenticidade.</p>
+    <p>Fundada por Monique Littieri, a marca une estilo e conforto em camisetas oversized que transformam qualquer look, do casual ao mais elaborado.</p>
+    <div class="about-highlights">
+      <div class="highlight">
+        <div class="num">2.8K+</div>
+        <div class="label">Seguidoras</div>
+      </div>
+      <div class="highlight">
+        <div class="num">100%</div>
+        <div class="label">Feminino</div>
+      </div>
+      <div class="highlight">
+        <div class="num">5.0</div>
+        <div class="label">Avaliacao</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <h2 class="section-title">O que dizem sobre nos</h2>
+  <p class="section-sub">CLIENTES SATISFEITAS</p>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"A camiseta chegou rapidinho e a qualidade e incrivel! A estampa e ainda mais linda pessoalmente. Ja quero a proxima!"</p>
+      <div class="test-author">
+        <div class="avatar">&#127800;</div>
+        <div>
+          <div class="name">Ana Paula</div>
+          <div class="city">Sao Paulo, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Amo a Lunii! As camisetas sao super confotaveis, o caimento oversized e perfeito. Comprei 3 e pretendo comprar mais!"</p>
+      <div class="test-author">
+        <div class="avatar">&#128149;</div>
+        <div>
+          <div class="name">Camila Souza</div>
+          <div class="city">Rio de Janeiro, RJ</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Virei revendedora e as minhas clientes amam! Produto de qualidade, entrega pontual. Super recomendo!"</p>
+      <div class="test-author">
+        <div class="avatar">&#10024;</div>
+        <div>
+          <div class="name">Fernanda Lima</div>
+          <div class="city">Belo Horizonte, MG</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Fique por dentro das novidades</h2>
+  <p>Cadastre seu e-mail e receba lancamentos e promocoes exclusivas antes de todo mundo.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Seu melhor e-mail..."/>
+    <a href="#" class="btn-primary" style="white-space:nowrap">Quero receber</a>
+  </div>
+</section>
+
+<!-- RODAPE -->
+<footer id="contato">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="color:#f4a7b9;display:block;margin-bottom:14px">LUNII<span>*</span></div>
+      <p>Estilo, conforto e personalidade.<br>Camisetas femininas que transformam o look.</p>
+      <div class="footer-social">
+        <div class="social-icon">&#128247;</div>
+        <div class="social-icon">&#128172;</div>
+        <div class="social-icon">&#128722;</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <a href="#">Novidades</a>
+      <a href="#">Mais Vendidas</a>
+      <a href="#">Promocoes</a>
+      <a href="#">Atacado</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ajuda</h4>
+      <a href="#">Como Comprar</a>
+      <a href="#">Prazo de Entrega</a>
+      <a href="#">Trocas e Devolucoes</a>
+      <a href="#">Rastrear Pedido</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <a href="https://www.instagram.com/lunii.tees/" target="_blank">@lunii.tees</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">E-mail</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Lunii by Monique Littieri &bull; Todos os direitos reservados &bull; Desenvolvido com amor
+  </div>
+</footer>
+
+</body>
+</html>
